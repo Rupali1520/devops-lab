@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        users: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Show Repository Files
         run: ls -R
