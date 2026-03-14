@@ -1,0 +1,21 @@
+name: DevOps CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - monitoring-script
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: List Files
+      run: ls -la
+
+    - name: Run Monitoring Script
+      run: bash scripts/server-monitor.sh
